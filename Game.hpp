@@ -13,7 +13,7 @@ public:
 
 	//Se definen las clases
 
-	void init(const char* title, int xpos, int ypos, int width, int heigh, bool fullscreen);
+	void init(const char* title, int xpos, int ypos, int zpos, int apos, int width, int heigh, bool fullscreen);
 	
 	void eventos();    //handleEvents
 	void actualizar(); //update
