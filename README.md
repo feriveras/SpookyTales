@@ -10,6 +10,7 @@ Hace mucho tiempo en un pequeño pueblo de un lugar muy lejano, un demonio maldi
 
 •	Estructuras de Datos Creadas
 •	Métodos Principales
+En el proyecto utilizamos varios metodos principales para la creacion del mapa para el cual utilizamos la libreria SDL para generar una ventana donde pintariamos nuestro mapa mediante las funciones Draw y utilizando el render, creariamos los objetos para insertar dentro del mapa a los jugadores y villanos del juego loss cuales se moveria utilizando la funcion movimiento que se encarga de recibir las teclas para realizar el respectivo dezplazamiento del objeto dentro del mapa repintando cada sprite dentro de esste.
 •	Análisis de Resultados
 El resultado del videojuego no fue el esperado por el grupo, muchos factores externos obstaculizaron el desarrollo del juego y el rendimiento de los desarrolladores, sin embargo, la experiencia adquirida y el conocimiento aprendido fue de mucho sustento, se pretende para las próximas entregas aplicar lo aprendido para mejorar el estado del proyecto. 
 •	Referencias
