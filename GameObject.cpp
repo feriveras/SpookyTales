@@ -2,13 +2,15 @@
 #include "AdministadorTexturas.h"
 
 //Constructor de la clase
-GameObject::GameObject(const char* texturesheet, int x, int y) 
+GameObject::GameObject(const char* texturesheet, int x, int y, int z,int a) 
 {
 	objTexture = TextureManager::cargarTextura(texturesheet);
 
 	//Se declara la posicion inicial del objeto
 	xpos = x;
 	ypos = y;
+	zpos = z;
+	apos = a;
 
 }
 //Facilita la creacion de objetos
@@ -18,6 +20,8 @@ void GameObject::actualizar()
 
 	xpos++;
 	ypos++;
+	zpos++;
+	apos++;
 
 	srcRect.h = 32;
 	srcRect.w = 32;
