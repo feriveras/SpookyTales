@@ -6,9 +6,12 @@
 //#include "Components.h"
 
 
+
 //Se declaran los nuevos objetos
 GameObject* jugador1;
 GameObject* villano1;
+GameObject* villano2;
+GameObject* villano3;
 Map* mapa;
 
 
@@ -24,7 +27,7 @@ Game::Game()
 
 Game::~Game()
 {}
-void Game::init(const char *title, int xpos, int ypos, int width, int height, bool fullscreen)
+void Game::init(const char *title, int xpos, int ypos,int zpos, int apos, int width, int height, bool fullscreen)
 {
 	//Se crea variable flags para determinar la pantalla completa por medio de valores booleanos
 	int flags = 0;
@@ -49,12 +52,13 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
 	}
 
 	//Cargando la textura del personaje llamando al metodo
-	jugador1 = new GameObject("Assets/jugador1.png", 0,0);
-	villano1 = new GameObject("Assets/villano1.png", 50, 50);
+	jugador1 = new GameObject("Assets/jugador1.png", 0,0,0,0);
+	villano1 = new GameObject("Assets/villano1.png", 50, 50,50,50);
+	villano2 = new GameObject("Assets/villano2.png", 100, 100,100,100);
+	villano3 = new GameObject("Assets/villano3.png", 150, 150, 150,150);
 	mapa = new Map();
 
 	//nuevoJugador.agregarComponente<picisionComponente>();
-
 
 }
 
@@ -77,6 +81,8 @@ void Game::actualizar()
 	//Se  cargan los objetos
 	jugador1 -> actualizar();
 	villano1->actualizar();
+	villano2->actualizar();
+	villano3->actualizar();
 	//administrador.actualizar();
 	//std::cout << nuevoJugador.getComponente<picisionComponente>().x() << "," <<
 		//nuevoJugador.getComponente<picisionComponente>().y() << std::endl;
@@ -93,6 +99,8 @@ void Game::render()
 	//Renderizar los personajes
 	jugador1 -> Render();
 	villano1 ->Render();
+	villano2->Render();
+	villano3->Render();
 	SDL_RenderPresent(renderer);
 
 }
